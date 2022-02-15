@@ -1,8 +1,8 @@
 const fs = require('fs/promises');
 
-function readFile() {
+function readFile(fileName) {
   return fs
-    .readFile('./talker.json', 'utf-8')
+    .readFile(fileName, 'utf-8')
     .then((fileContent) => JSON.parse(fileContent));
 }
 
